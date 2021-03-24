@@ -38,7 +38,7 @@ int main()
 	scanf("%f", &mean_service_time);
 
 
-    
+    // testing
 
     
     for (int i=0;i<Q_limit;i++){ // initialize time_arrival
