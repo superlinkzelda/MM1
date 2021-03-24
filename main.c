@@ -3,10 +3,13 @@
 #include <stdlib.h>
 #include <time.h>
 #include "initialize.h"
+#include "lcgrand.h"
 
 #define IDLE 0
 #define BUSY 1
 #define Q_limit 10000
+
+float expon(float mean);
 
 int main()
 {
@@ -145,4 +148,9 @@ void depart(void)  // change to call by regerence
 		
 		time_arrival[i] = time_arrival[i+1];
 	}
+}
+
+float expon(float mean){ /* Exponential variate generation function. */
+	/* Return an exponential random variate with mean "mean". */
+	return -mean * log(lcgrand(1));
 }
