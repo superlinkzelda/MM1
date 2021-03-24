@@ -152,5 +152,5 @@ void depart(void)  // change to call by regerence
 
 float expon(float mean){ /* Exponential variate generation function. */
 	/* Return an exponential random variate with mean "mean". */
-	return -mean * log(lcgrand(1));
+	return -mean * log(lcgrand(1)); // 這裡的一代表我們MEAN=1,所以要改成我們的INPUT(我剛剛打的)
 }
